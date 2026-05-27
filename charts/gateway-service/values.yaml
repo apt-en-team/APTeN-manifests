@@ -18,3 +18,5 @@ service:
 env:
   - name: SPRING_PROFILES_ACTIVE
     value: "prod"
+  - name: CORS_ORIGINS
+    value: "https://tc.greenart.n-e.kr"
