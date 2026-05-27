@@ -8,7 +8,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: apartment=harbor.greenart.n-e.kr/apten/apartment-complex-service
     
     # 2. 업데이트 전략: 빌드 시간이 가장 최신인 이미지를 선택
-    argocd-image-updater.argoproj.io/auth.update-strategy: newest-build
+    argocd-image-updater.argoproj.io/apartment.update-strategy: newest-build
     
     # 3. Git Write-back 설정: 강사님이 만드신 'git-creds' 시크릿 사용
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
