@@ -1,0 +1,6 @@
+apiVersion: v2
+name: apartment-complex-service # 각 서비스 이름에 맞게 수정
+description: Apten Apartment Complex Service
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
