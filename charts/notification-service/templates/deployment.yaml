@@ -36,5 +36,5 @@ spec:
         secret:
           secretName: firebase-config   # 39번 서버에 실제로 생성한 Secret 이름과 일치해야 함
           items:
-          - key: firebase.json          # Secret 내부에 기재된 데이터 Key 이름
+          - key: firebase-secret.json          # Secret 내부에 기재된 데이터 Key 이름
             path: firebase.json          # Secret의 데이터를 firebase.json 파일로 마운트
