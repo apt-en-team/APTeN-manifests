@@ -22,7 +22,19 @@ spec:
             - secretRef:
                 name: app-secret
           # 필요한 경우 env 설정 추가
-          {{- with .Values.env }}          
+          {{- with .Values.env }}
           env:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          volumeMounts:
+            - name: firebase-volume
+              mountPath: /app/config/firebase/firebase.json   # 스프링이 찾는 주소
+              subPath: firebase.json
+              readOnly: true
+      volumes:
+      - name: firebase-volume
+        secret:
+          secretName: firebase-config   # 39번 서버에 실제로 생성한 Secret 이름과 일치해야 함
+          items:
+          - key: firebase.json          # Secret 내부에 기재된 데이터 Key 이름
+            path: firebase.json          # Secret의 데이터를 firebase.json 파일로 마운트
