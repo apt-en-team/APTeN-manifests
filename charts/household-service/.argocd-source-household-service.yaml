@@ -4,5 +4,5 @@ helm:
     value: harbor.greenart.n-e.kr/apten/household-service
     forcestring: true
   - name: image.tag
-    value: "43"
+    value: "44"
     forcestring: true
