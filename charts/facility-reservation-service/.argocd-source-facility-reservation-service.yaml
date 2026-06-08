@@ -4,5 +4,5 @@ helm:
     value: harbor.greenart.n-e.kr/apten/facility-reservation-service
     forcestring: true
   - name: image.tag
-    value: "58"
+    value: "60"
     forcestring: true
