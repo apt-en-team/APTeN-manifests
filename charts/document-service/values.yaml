@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: harbor.greenart.n-e.kr/apten/document-service
+  pullPolicy: IfNotPresent
+  tag: "1"
+
+service:
+  type: ClusterIP
+  port: 9090
+  targetPort: 9090
+
+env:
+  - name: SPRING_PROFILES_ACTIVE
+    value: "prod"
+  - name: DOCUMENT_SERVER_PORT
+    value: "9090"

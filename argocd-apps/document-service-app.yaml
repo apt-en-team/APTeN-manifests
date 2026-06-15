@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: document-service
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: document=harbor.greenart.n-e.kr/apten/document-service
+    argocd-image-updater.argoproj.io/document.update-strategy: newest-build
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/apt-en-team/APTeN-manifests.git
+    targetRevision: main
+    path: ./charts/document-service
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
