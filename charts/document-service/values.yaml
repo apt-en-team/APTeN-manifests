@@ -6,9 +6,10 @@ image:
   tag: "1"
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 9090
   targetPort: 9090
+  nodePort: 30090
 
 env:
   - name: SPRING_PROFILES_ACTIVE
