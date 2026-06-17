@@ -6,13 +6,10 @@ image:
   tag: "1"
 
 service:
-  type: NodePort
-  port: 9090
-  targetPort: 9090
-  nodePort: 30090
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
 
 env:
   - name: SPRING_PROFILES_ACTIVE
     value: "prod"
-  - name: DOCUMENT_SERVER_PORT
-    value: "9090"
