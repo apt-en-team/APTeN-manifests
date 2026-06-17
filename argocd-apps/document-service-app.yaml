@@ -4,8 +4,8 @@ metadata:
   name: document-service
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: document=harbor.greenart.n-e.kr/apten/document-service
-    argocd-image-updater.argoproj.io/document.update-strategy: newest-build
+    argocd-image-updater.argoproj.io/image-list: document-service=harbor.greenart.n-e.kr/apten/document-service
+    argocd-image-updater.argoproj.io/document-service.update-strategy: newest-build
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
 
 spec:
