@@ -4,5 +4,5 @@ helm:
     value: harbor.greenart.n-e.kr/apten/vue-fe
     forcestring: true
   - name: image.tag
-    value: "38"
+    value: "39"
     forcestring: true
