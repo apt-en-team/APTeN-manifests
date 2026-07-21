@@ -4,5 +4,5 @@ helm:
     value: harbor.greenart.n-e.kr/apten/gateway-service
     forcestring: true
   - name: image.tag
-    value: "82"
+    value: "77"
     forcestring: true
