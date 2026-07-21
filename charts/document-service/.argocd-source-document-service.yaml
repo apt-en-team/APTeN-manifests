@@ -1,7 +1,7 @@
 helm:
   parameters:
   - name: image.tag
-    value: "83"
+    value: "78"
     forcestring: true
   - name: image.name
     value: harbor.greenart.n-e.kr/apten/document-service
